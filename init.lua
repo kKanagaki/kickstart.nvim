@@ -163,6 +163,10 @@ vim.opt.termguicolors = true
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+vim.keymap.set('n', 'si', '<cmd>source $MYVIMRC<CR>')
+vim.keymap.set('n', '<leader>,', '<cmd>edit $MYVIMRC<CR>', { desc = 'edit init.lua' })
+vim.keymap.set('i', 'jj', '<Esc>')
+
 vim.keymap.set('n', 'tt', '<cmd>NvimTreeToggle<CR>')
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
@@ -200,9 +204,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
-vim.keymap.set('n', 'si', '<cmd>source $MYVIMRC<CR>')
-vim.keymap.set('n', '<leader>,', '<cmd>edit $MYVIMRC<CR>', { desc = 'edit init.lua' })
-vim.keymap.set('i', 'jj', '<Esc>')
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
