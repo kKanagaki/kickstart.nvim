@@ -931,7 +931,15 @@ require('lazy').setup({
           group_empty = true,
         },
         filters = {
+          enable = true,
+          git_ignored = true,
           dotfiles = false,
+          custom = {
+            '^\\.git$',
+          },
+          exclude = {
+            '\\.gitignore',
+          },
         },
       }
     end,
