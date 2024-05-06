@@ -168,6 +168,7 @@ vim.keymap.set('n', '<leader>,', '<cmd>edit $MYVIMRC<CR>', { desc = 'edit init.l
 vim.keymap.set('i', 'jj', '<Esc>')
 
 vim.keymap.set('n', 'tt', '<cmd>NvimTreeToggle<CR>')
+vim.keymap.set('n', 'tf', '<cmd>NvimTreeFocus<CR>')
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
