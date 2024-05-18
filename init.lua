@@ -113,7 +113,7 @@ vim.opt.showmode = false
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.opt.clipboard = 'unnamedplus'
+-- vim.opt.clipboard = 'unnamedplus'
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -171,6 +171,14 @@ vim.opt.expandtab = true
 vim.keymap.set('n', 'si', '<cmd>source $MYVIMRC<CR>')
 vim.keymap.set('n', '<leader>,', '<cmd>edit $MYVIMRC<CR>', { desc = 'edit init.lua' })
 vim.keymap.set('i', 'jj', '<Esc>')
+
+vim.keymap.set('v', '<Leader>y', '"+y')
+-- vim.keymap.set('v', '<Leader>d', '"+d')
+vim.keymap.set('n', '<Leader>y', '"+y')
+vim.keymap.set('n', '<Leader>p', '"+p')
+vim.keymap.set('n', '<Leader>P', '"+P')
+-- vim.keymap.set('v', '<Leader>p', '"+p')
+-- vim.keymap.set('v', '<Leader>P', '"+P')
 
 vim.keymap.set('n', 'tt', '<cmd>NvimTreeToggle<CR>')
 vim.keymap.set('n', 'tf', '<cmd>NvimTreeFocus<CR>')
@@ -770,7 +778,7 @@ require('lazy').setup({
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
-          --['<CR>'] = cmp.mapping.confirm { select = true },
+          ['<CR>'] = cmp.mapping.confirm { select = true },
           --['<Tab>'] = cmp.mapping.select_next_item(),
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
