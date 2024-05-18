@@ -183,6 +183,9 @@ vim.keymap.set('n', '<Leader>P', '"+P')
 vim.keymap.set('n', 'tt', '<cmd>NvimTreeToggle<CR>')
 vim.keymap.set('n', 'tf', '<cmd>NvimTreeFocus<CR>')
 
+vim.api.nvim_set_keymap('n', '<C-t>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-t>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -970,6 +973,14 @@ require('lazy').setup({
         },
       }
     end,
+  },
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    opts = {
+      open_mapping = [[<c-t>]],
+      direction = 'float',
+    },
   },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
